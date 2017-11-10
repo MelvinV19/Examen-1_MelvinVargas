@@ -9,12 +9,13 @@ public class Objeto {
     String tam;
     String calidad;
     double precio;
-    Familiar dueño;
+    String tipo;
+    String dueño;
 
     public Objeto() {
     }
 
-    public Objeto(String color, String descripcion, String marca, String tam, String calidad, double precio, Familiar dueño) {
+    public Objeto(String color, String descripcion, String marca, String tam, String calidad, double precio, String dueño,String tipo) {
         this.color = color;
         this.descripcion = descripcion;
         this.marca = marca;
@@ -22,7 +23,13 @@ public class Objeto {
         this.calidad = calidad;
         this.precio = precio;
         this.dueño = dueño;
+        this.tipo=tipo;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+    
 
     public String getColor() {
         return color;
@@ -48,7 +55,7 @@ public class Objeto {
         return precio;
     }
 
-    public Familiar getDueño() {
+    public String getDueño() {
         return dueño;
     }
 
@@ -76,7 +83,7 @@ public class Objeto {
         this.precio = precio;
     }
 
-    public void setDueño(Familiar dueño) {
+    public void setDueño(String dueño) {
         this.dueño = dueño;
     }
     

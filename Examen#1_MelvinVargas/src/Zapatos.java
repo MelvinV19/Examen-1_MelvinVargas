@@ -13,8 +13,8 @@ public class Zapatos extends Objeto{
         this.confort = confort;
     }
 
-    public Zapatos(String talla, String suela, String confort, String color, String descripcion, String marca, String tam, String calidad, double precio, Familiar dueño) {
-        super(color, descripcion, marca, tam, calidad, precio, dueño);
+    public Zapatos(String talla, String suela, String confort, String color, String descripcion, String marca, String tam, String calidad, double precio, String dueño,String tipo) {
+        super(color, descripcion, marca, tam, calidad, precio, dueño,tipo);
         this.talla = talla;
         this.suela = suela;
         this.confort = confort;
@@ -46,7 +46,7 @@ public class Zapatos extends Objeto{
 
     @Override
     public String toString() {
-        return "Zapatos{" + "talla=" + talla + ", suela=" + suela + ", confort=" + confort + '}';
+        return "Zapatos"+"\n"+"color: "+super.getColor()+"\n"+"Descripcion: "+super.getDescripcion()+"\n"+"marca: "+super.getMarca()+"\n"+"tamaño:"+super.getTam()+"\n" ;
     }
     
     

@@ -116,7 +116,7 @@ public class Principal extends javax.swing.JFrame {
         tf_color = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        ta_descrpcion = new javax.swing.JTextArea();
+        ta_descripcion = new javax.swing.JTextArea();
         jLabel26 = new javax.swing.JLabel();
         tf_marca = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
@@ -135,9 +135,9 @@ public class Principal extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         tf_precio = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
-        bg_zapatos = new javax.swing.JRadioButton();
-        bg_ropa = new javax.swing.JRadioButton();
-        bg_objetos = new javax.swing.JRadioButton();
+        rb_zapatos = new javax.swing.JRadioButton();
+        rb_ropa = new javax.swing.JRadioButton();
+        rb_objetos = new javax.swing.JRadioButton();
         b_agregarobjeto = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -599,9 +599,9 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel25.setText("Descripcion");
 
-        ta_descrpcion.setColumns(20);
-        ta_descrpcion.setRows(5);
-        jScrollPane1.setViewportView(ta_descrpcion);
+        ta_descripcion.setColumns(20);
+        ta_descripcion.setRows(5);
+        jScrollPane1.setViewportView(ta_descripcion);
 
         jLabel26.setText("Marca");
 
@@ -644,14 +644,14 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel30.setText("Tipo");
 
-        bg_tipo.add(bg_zapatos);
-        bg_zapatos.setText("Zapatos");
+        bg_tipo.add(rb_zapatos);
+        rb_zapatos.setText("Zapatos");
 
-        bg_tipo.add(bg_ropa);
-        bg_ropa.setText("Ropa");
+        bg_tipo.add(rb_ropa);
+        rb_ropa.setText("Ropa");
 
-        bg_tipo.add(bg_objetos);
-        bg_objetos.setText("Objetos Del Hogar");
+        bg_tipo.add(rb_objetos);
+        rb_objetos.setText("Objetos Del Hogar");
 
         b_agregarobjeto.setText("Agregar");
         b_agregarobjeto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -707,11 +707,11 @@ public class Principal extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(rb10))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(bg_zapatos)
+                                .addComponent(rb_zapatos)
                                 .addGap(18, 18, 18)
-                                .addComponent(bg_ropa)
+                                .addComponent(rb_ropa)
                                 .addGap(18, 18, 18)
-                                .addComponent(bg_objetos))))
+                                .addComponent(rb_objetos))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(64, 64, 64)
                         .addComponent(b_agregarobjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -756,9 +756,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
-                    .addComponent(bg_zapatos)
-                    .addComponent(bg_ropa)
-                    .addComponent(bg_objetos))
+                    .addComponent(rb_zapatos)
+                    .addComponent(rb_ropa)
+                    .addComponent(rb_objetos))
                 .addGap(42, 42, 42)
                 .addComponent(b_agregarobjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(59, Short.MAX_VALUE))
@@ -963,6 +963,7 @@ public class Principal extends javax.swing.JFrame {
             tf_ocupacion.setText("");
             tf_horario.setText("");
             tf_tiempo.setText("");
+            tf_sueldo.setText("");
             System.out.println(lista);
         } catch (Exception e) {
             e.printStackTrace();
@@ -1001,7 +1002,70 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_b_eliminarpMouseClicked
 
     private void b_agregarobjetoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_agregarobjetoMouseClicked
-        
+        String color = tf_color.getText();
+        String descripcion = ta_descripcion.getText();
+        String marca = tf_marca.getText();
+        String tam = tf_tam.getText();
+        String calidad = "";
+        if (rb_1.isSelected()) {
+            calidad = "1";
+        }
+        if (rb2.isSelected()) {
+            calidad = "2";
+        }
+        if (rb3.isSelected()) {
+            calidad = "3";
+        }
+        if (rb4.isSelected()) {
+            calidad = "4";
+        }
+        if (rb5.isSelected()) {
+            calidad = "5";
+        }
+        if (rb6.isSelected()) {
+            calidad = "6";
+        }
+        if (rb7.isSelected()) {
+            calidad = "7";
+        }
+        if (rb8.isSelected()) {
+            calidad = "8";
+        }
+        if (rb9.isSelected()) {
+            calidad = "9";
+        }
+        if (rb10.isSelected()) {
+            calidad = "10";
+        }
+        double precio = Double.parseDouble(tf_precio.getText());
+        String tipo = "";
+        if (rb_zapatos.isSelected()) {
+            tipo = "Zapatos";
+            String talla = JOptionPane.showInputDialog("Ingrese talla de los zapatos");
+            String suela = JOptionPane.showInputDialog("Ingrese material de la suela");
+            String confort = JOptionPane.showInputDialog("Ingrese el confort del zapato 1-10");
+            int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion de la persona dueña del objeto"));
+            lista.get(pos).getLista().add(new Zapatos(talla, suela, confort, color, descripcion, marca, tam, calidad, precio, suela, tipo));
+            System.out.println(lista);
+
+        }
+        if (rb_ropa.isSelected()) {
+            tipo = "Ropa";
+            String talla=JOptionPane.showInputDialog("Ingrese talla de la ropa");
+            String material=JOptionPane.showInputDialog("Ingrese material de la ropa");
+            String pais=JOptionPane.showInputDialog("Ingrese pais de donde viene la ropa");
+            int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion de la persona dueña del objeto"));
+            lista.get(pos).getLista().add(new Ropa( talla,  material,  pais, color,  descripcion,  marca,  tam,  calidad,  precio,  lista.get(pos).getNombre(), tipo));
+            System.out.println(lista);
+
+        }
+        if (rb_objetos.isSelected()) {
+            tipo = "Objetos del hogar";
+            System.out.println(lista);
+            
+        }
+
+
     }//GEN-LAST:event_b_agregarobjetoMouseClicked
 
     /**
@@ -1049,12 +1113,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton b_modificarp;
     private javax.swing.ButtonGroup bg_calidad;
     private javax.swing.ButtonGroup bg_estado;
-    private javax.swing.JRadioButton bg_objetos;
     private javax.swing.ButtonGroup bg_rol;
-    private javax.swing.JRadioButton bg_ropa;
     private javax.swing.ButtonGroup bg_sexos;
     private javax.swing.ButtonGroup bg_tipo;
-    private javax.swing.JRadioButton bg_zapatos;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -1112,14 +1173,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_m;
     private javax.swing.JRadioButton rb_madre;
     private javax.swing.JRadioButton rb_mp;
+    private javax.swing.JRadioButton rb_objetos;
     private javax.swing.JRadioButton rb_otro;
     private javax.swing.JRadioButton rb_otrop;
     private javax.swing.JRadioButton rb_padre;
+    private javax.swing.JRadioButton rb_ropa;
     private javax.swing.JRadioButton rb_soltero;
     private javax.swing.JRadioButton rb_solterop;
+    private javax.swing.JRadioButton rb_zapatos;
     private javax.swing.JSpinner spinner_edad;
     private javax.swing.JSpinner spinner_edadp;
-    private javax.swing.JTextArea ta_descrpcion;
+    private javax.swing.JTextArea ta_descripcion;
     private javax.swing.JTabbedPane tab;
     private javax.swing.JTextField tf_altura;
     private javax.swing.JTextField tf_color;

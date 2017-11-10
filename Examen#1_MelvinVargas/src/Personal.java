@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,7 +16,7 @@ public class Personal extends Persona{
     String horario;
     String tiempo;
     double sueldo;
-
+    ArrayList<Objeto> lista2=new ArrayList();
     public Personal() {
     }
 
@@ -67,9 +70,17 @@ public class Personal extends Persona{
         this.sueldo = sueldo;
     }
 
+    public ArrayList<Objeto> getLista() {
+        return lista;
+    }
+
+    public void setLista2(ArrayList<Objeto> lista) {
+        this.lista = lista;
+    }
+    
     @Override
     public String toString() {
-        return "Personal{" + "ocupacion=" + ocupacion + ", horario=" + horario + ", tiempo=" + tiempo + ", sueldo=" + sueldo + '}';
+        return "Personal: "+super.getNombre()+"\n"+"contraseña: "+super.getContra()+"\n" + "ocupacion: " + ocupacion + "\n"+"Objetos: "+lista+"\n";
     }
     
 }

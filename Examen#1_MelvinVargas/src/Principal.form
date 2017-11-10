@@ -864,11 +864,11 @@
                                       <Component id="rb10" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="bg_zapatos" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rb_zapatos" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="bg_ropa" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rb_ropa" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="bg_objetos" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rb_objetos" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -926,9 +926,9 @@
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="bg_zapatos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="bg_ropa" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="bg_objetos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rb_zapatos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rb_ropa" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rb_objetos" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Component id="b_agregarobjeto" min="-2" pref="76" max="-2" attributes="0"/>
@@ -957,7 +957,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="ta_descrpcion">
+                <Component class="javax.swing.JTextArea" name="ta_descripcion">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -1077,7 +1077,7 @@
                 <Property name="text" type="java.lang.String" value="Tipo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="bg_zapatos">
+            <Component class="javax.swing.JRadioButton" name="rb_zapatos">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="bg_tipo"/>
@@ -1085,7 +1085,7 @@
                 <Property name="text" type="java.lang.String" value="Zapatos"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="bg_ropa">
+            <Component class="javax.swing.JRadioButton" name="rb_ropa">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="bg_tipo"/>
@@ -1093,7 +1093,7 @@
                 <Property name="text" type="java.lang.String" value="Ropa"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="bg_objetos">
+            <Component class="javax.swing.JRadioButton" name="rb_objetos">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="bg_tipo"/>

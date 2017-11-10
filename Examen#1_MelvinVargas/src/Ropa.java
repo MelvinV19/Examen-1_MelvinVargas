@@ -22,8 +22,8 @@ public class Ropa extends Objeto{
         this.pais = pais;
     }
 
-    public Ropa(String talla, String material, String pais, String color, String descripcion, String marca, String tam, String calidad, double precio, Familiar dueño) {
-        super(color, descripcion, marca, tam, calidad, precio, dueño);
+    public Ropa(String talla, String material, String pais, String color, String descripcion, String marca, String tam, String calidad, double precio, String dueño,String tipo) {
+        super(color, descripcion, marca, tam, calidad, precio, dueño,tipo);
         this.talla = talla;
         this.material = material;
         this.pais = pais;
@@ -55,7 +55,7 @@ public class Ropa extends Objeto{
 
     @Override
     public String toString() {
-        return "Ropa{" + "talla=" + talla + ", material=" + material + ", pais=" + pais + '}';
+        return "Ropa"+"\n"+"color: "+super.getColor()+"\n"+"Descripcion: "+super.getDescripcion()+"\n"+"marca: "+super.getMarca()+"\n"+"tamaño:"+super.getTam()+"\n" ;
     }
     
 }
