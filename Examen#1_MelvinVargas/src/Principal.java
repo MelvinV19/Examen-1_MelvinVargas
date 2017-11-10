@@ -1,5 +1,11 @@
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /*
@@ -11,8 +17,8 @@ import javax.swing.JOptionPane;
  *
  * @author User
  */
-public class Principal extends javax.swing.JFrame {
-
+public class Principal extends javax.swing.JFrame  {
+    static DateFormat formato = new SimpleDateFormat("yyyy/MM/dd");
     static int madre = 1;
     static int padre = 1;
     static int hermano = 1;
@@ -28,6 +34,7 @@ public class Principal extends javax.swing.JFrame {
         tab.setEnabledAt(3, false);
         tab.setEnabledAt(2, false);
         tab.setEnabledAt(1, false);
+        
     }
 
     /**
@@ -1060,8 +1067,21 @@ public class Principal extends javax.swing.JFrame {
 
         }
         if (rb_objetos.isSelected()) {
-            tipo = "Objetos del hogar";
-            System.out.println(lista);
+            try {
+                tipo = "Objetos del hogar";
+                String tiempo=JOptionPane.showInputDialog("Ingrese tiempo de vida del producto");
+                String area=JOptionPane.showInputDialog("Ingrese el area de la casa donde se usa");
+                String instrucciones=JOptionPane.showInputDialog("Ingrese las instrucciones de uso");
+                String Fechas=JOptionPane.showInputDialog("Ingrese una fecha en este formato yyyy/MM/dd");
+                
+                Date fecha=formato.parse(Fechas);
+              
+                int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion de la persona dueña del objeto"));
+                lista.get(pos).getLista().add(new Objetos_hogar( tiempo,  area,  instrucciones,  fecha,  color,  descripcion,  marca,  tam,  calidad,  precio,  lista.get(pos).getNombre(), tipo));
+                System.out.println(lista);
+            } catch (ParseException ex) {
+                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            }
             
         }
 
