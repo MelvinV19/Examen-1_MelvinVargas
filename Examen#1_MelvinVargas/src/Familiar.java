@@ -9,9 +9,8 @@ public class Familiar extends Persona{
     double peso;
     ArrayList<Objeto> lista=new ArrayList();
 
-    public Familiar() {
-    }
-
+    
+    
     public Familiar(String rol, String trabajo, double altura, double peso) {
         this.rol = rol;
         this.trabajo = trabajo;
@@ -19,14 +18,16 @@ public class Familiar extends Persona{
         this.peso = peso;
     }
 
-    public Familiar(String rol, String trabajo, double altura, double peso, String nombre, int edad, String id, String Sexo, String estado, Objeto objeto) {
-        super(nombre, edad, id, Sexo, estado, objeto);
+    public Familiar(String rol, String trabajo, double altura, double peso, String nombre, int edad, String id, String Sexo, String estado, Objeto objeto,String contra) {
+        super(nombre, edad, id, Sexo, estado, objeto,contra);
         this.rol = rol;
         this.trabajo = trabajo;
         this.altura = altura;
         this.peso = peso;
     }
 
+   
+    
     public String getRol() {
         return rol;
     }

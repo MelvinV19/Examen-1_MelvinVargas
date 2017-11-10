@@ -24,12 +24,13 @@ public class Personal extends Persona{
         this.sueldo = sueldo;
     }
 
-    public Personal(String ocupacion, String horario, String tiempo, double sueldo, String nombre, int edad, String id, String Sexo, String estado, Objeto objeto) {
-        super(nombre, edad, id, Sexo, estado, objeto);
+    public Personal(String ocupacion, String horario, String tiempo, double sueldo, String nombre, int edad, String id, String Sexo, String estado, Objeto objeto,String contra) {
+        super(nombre, edad, id, Sexo, estado, objeto,contra);
         this.ocupacion = ocupacion;
         this.horario = horario;
         this.tiempo = tiempo;
         this.sueldo = sueldo;
+        this.contra=contra;
     }
 
     

@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class Persona {
     String nombre;
+    String contra;
     int edad;
     String id;
     String Sexo;
@@ -23,15 +24,24 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(String nombre, int edad, String id, String Sexo, String estado, Objeto objeto) {
+    public Persona(String nombre, int edad, String id, String Sexo, String estado, Objeto objeto,String contra) {
         this.nombre = nombre;
         this.edad = edad;
         this.id = id;
         this.Sexo = Sexo;
         this.estado = estado;
         this.objeto = objeto;
+        this.contra=contra;
     }
 
+    public String getContra() {
+        return contra;
+    }
+
+    public void setContra(String contra) {
+        this.contra = contra;
+    }
+    
     public String getNombre() {
         return nombre;
     }
