@@ -67,5 +67,10 @@ public class Familiar extends Persona{
     public void setObjetos(ArrayList<Objeto> lista) {
         this.lista = lista;
     }
+
+    @Override
+    public String toString() {
+        return "Familiar: " +super.getNombre()+"\n"+"contraseña: "+super.getContra()+"\n" +"rol: " + rol + "\n"+"objetos: "+lista ;
+    }
     
 }
