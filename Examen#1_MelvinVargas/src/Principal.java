@@ -146,6 +146,8 @@ public class Principal extends javax.swing.JFrame  {
         rb_ropa = new javax.swing.JRadioButton();
         rb_objetos = new javax.swing.JRadioButton();
         b_agregarobjeto = new javax.swing.JButton();
+        b_modificaro = new javax.swing.JButton();
+        b_eliminarobjetos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -667,6 +669,20 @@ public class Principal extends javax.swing.JFrame  {
             }
         });
 
+        b_modificaro.setText("Modificar objetos");
+        b_modificaro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_modificaroMouseClicked(evt);
+            }
+        });
+
+        b_eliminarobjetos.setText("Eliminar objetos");
+        b_eliminarobjetos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_eliminarobjetosMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -675,54 +691,61 @@ public class Principal extends javax.swing.JFrame  {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel24)
-                        .addGap(18, 18, 18)
-                        .addComponent(tf_color, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel25)
-                            .addComponent(jLabel26)
-                            .addComponent(jLabel27)
-                            .addComponent(jLabel28)
-                            .addComponent(jLabel29)
-                            .addComponent(jLabel30))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(tf_tam, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                                .addComponent(tf_marca, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(tf_precio, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(rb_1)
+                                .addComponent(jLabel24)
                                 .addGap(18, 18, 18)
-                                .addComponent(rb2)
-                                .addGap(18, 18, 18)
-                                .addComponent(rb3)
-                                .addGap(18, 18, 18)
-                                .addComponent(rb4)
-                                .addGap(18, 18, 18)
-                                .addComponent(rb5)
-                                .addGap(18, 18, 18)
-                                .addComponent(rb6)
-                                .addGap(18, 18, 18)
-                                .addComponent(rb7)
-                                .addGap(18, 18, 18)
-                                .addComponent(rb8)
-                                .addGap(18, 18, 18)
-                                .addComponent(rb9)
-                                .addGap(18, 18, 18)
-                                .addComponent(rb10))
+                                .addComponent(tf_color, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(rb_zapatos)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel25)
+                                    .addComponent(jLabel26)
+                                    .addComponent(jLabel27)
+                                    .addComponent(jLabel28)
+                                    .addComponent(jLabel29)
+                                    .addComponent(jLabel30))
                                 .addGap(18, 18, 18)
-                                .addComponent(rb_ropa)
-                                .addGap(18, 18, 18)
-                                .addComponent(rb_objetos))))
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(tf_tam, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                                        .addComponent(tf_marca, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(tf_precio, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(rb_1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb3)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb4)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb5)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb6)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb7)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb8)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb9)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb10))
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(rb_zapatos)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb_ropa)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rb_objetos)))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(64, 64, 64)
-                        .addComponent(b_agregarobjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(258, Short.MAX_VALUE))
+                        .addComponent(b_agregarobjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(123, 123, 123)
+                        .addComponent(b_modificaro, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+                        .addComponent(b_eliminarobjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -767,8 +790,11 @@ public class Principal extends javax.swing.JFrame  {
                     .addComponent(rb_ropa)
                     .addComponent(rb_objetos))
                 .addGap(42, 42, 42)
-                .addComponent(b_agregarobjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(b_agregarobjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(b_modificaro, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(b_eliminarobjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         tab.addTab("Agregar objetos", jPanel4);
@@ -901,6 +927,7 @@ public class Principal extends javax.swing.JFrame  {
             tf_altura.setText("");
             tf_peso.setText("");
             System.out.println(lista);
+            System.out.println("");
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "ocurrio un error y no se pudieron agregar los datos");
@@ -909,6 +936,7 @@ public class Principal extends javax.swing.JFrame  {
 
     private void b_modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_modificarMouseClicked
         System.out.println(lista);
+        System.out.println("");
         int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion que desea modificar"));
         int opc = Integer.parseInt(JOptionPane.showInputDialog("1.modificar nombre\n" + "2.modificar contraseña\n" + "3.modificar id\n" + "Ingrese numero de lo que desea modificar"));
         while (opc > 3) {
@@ -927,11 +955,13 @@ public class Principal extends javax.swing.JFrame  {
             lista.get(pos).setId(n_id);
         }
         System.out.println(lista);
+        System.out.println("");
     }//GEN-LAST:event_b_modificarMouseClicked
 
     private void b_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_eliminarActionPerformed
         int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion que desea elminiar"));
         System.out.println(lista);
+        System.out.println("");
         lista.remove(pos);
     }//GEN-LAST:event_b_eliminarActionPerformed
 
@@ -1084,9 +1114,51 @@ public class Principal extends javax.swing.JFrame  {
             }
             
         }
-
+        tf_color.setText("");
+        ta_descripcion.setText("");
+        tf_marca.setText("");
+        tf_tam.setText("");
+        tf_precio.setText("");
 
     }//GEN-LAST:event_b_agregarobjetoMouseClicked
+
+    private void b_eliminarobjetosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_eliminarobjetosMouseClicked
+        System.out.println(lista);
+        int pos=Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion de la persona dueña del objeto que desea eliminar"));
+        int pos2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion del objeto que desea eliminar"));
+        System.out.println("");
+        lista.get(pos).getLista().remove(pos2);
+        System.out.println(lista);
+    }//GEN-LAST:event_b_eliminarobjetosMouseClicked
+
+    private void b_modificaroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_modificaroMouseClicked
+        System.out.println(lista);
+        int pos=Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion de la persona dueña del objeto que desea modificar"));
+        int pos2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion del objeto que desea modificar"));
+        int opc = Integer.parseInt(JOptionPane.showInputDialog("1.modificar color\n" + "2.modificar descripcion\n" + "3.modificar marca\n"+"4.modificar tamaño\n"+"5.modificar precio\n" + "Ingrese numero de lo que desea modificar"));
+        if(opc==1){
+            String n_color=JOptionPane.showInputDialog("Ingrese nuevo color");
+            ((Objeto)lista.get(pos).getLista().get(pos2)).setColor(n_color);
+        }
+        if(opc==2){
+            String n_descripcion=JOptionPane.showInputDialog("Ingrese nueva descripcion");
+            ((Objeto)lista.get(pos).getLista().get(pos2)).setDescripcion(n_descripcion);
+        }
+        if(opc==3){
+            String n_marca=JOptionPane.showInputDialog("Ingrese nueva marca");
+            ((Objeto)lista.get(pos).getLista().get(pos2)).setMarca(n_marca);
+        }
+        if(opc==4){
+           String n_tam=JOptionPane.showInputDialog("Ingrese nuevo tamaño");
+            ((Objeto)lista.get(pos).getLista().get(pos2)).setTam(n_tam); 
+        }
+        if(opc==5){
+            double n_precio=Double.parseDouble(JOptionPane.showInputDialog("Ingrese nuevo precio"));
+            ((Objeto)lista.get(pos).getLista().get(pos2)).setPrecio(n_precio);
+        }
+        System.out.println("");
+        System.out.println(lista);
+    }//GEN-LAST:event_b_modificaroMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1128,8 +1200,10 @@ public class Principal extends javax.swing.JFrame  {
     private javax.swing.JButton b_agregarobjeto;
     private javax.swing.JButton b_agregarp;
     private javax.swing.JButton b_eliminar;
+    private javax.swing.JButton b_eliminarobjetos;
     private javax.swing.JButton b_eliminarp;
     private javax.swing.JButton b_modificar;
+    private javax.swing.JButton b_modificaro;
     private javax.swing.JButton b_modificarp;
     private javax.swing.ButtonGroup bg_calidad;
     private javax.swing.ButtonGroup bg_estado;

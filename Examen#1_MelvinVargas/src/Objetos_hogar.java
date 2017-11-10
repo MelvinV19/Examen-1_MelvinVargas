@@ -37,7 +37,7 @@ public class Objetos_hogar extends Objeto {
 
     @Override
     public String toString() {
-        return "Objeto de hogar"+"\n"+"color: "+super.getColor()+"\n"+"Descripcion: "+super.getDescripcion()+"\n"+"marca: "+super.getMarca()+"\n"+"tamaño:"+super.getTam()+"\n" ;
+        return "Objeto de hogar"+" "+"color: "+super.getColor()+" "+"Descripcion: "+super.getDescripcion()+" "+"marca: "+super.getMarca()+" "+"tamaño:"+super.getTam()+"\n" ;
     }
     
 }

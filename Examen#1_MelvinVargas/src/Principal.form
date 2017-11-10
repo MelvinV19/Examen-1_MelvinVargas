@@ -821,63 +821,72 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="tf_color" min="-2" pref="175" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel26" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="tf_tam" alignment="0" pref="155" max="32767" attributes="0"/>
-                                      <Component id="tf_marca" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="tf_precio" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="rb_1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb8" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb9" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb10" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tf_color" min="-2" pref="175" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="rb_zapatos" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel26" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb_ropa" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rb_objetos" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="tf_tam" alignment="0" pref="155" max="32767" attributes="0"/>
+                                              <Component id="tf_marca" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="tf_precio" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="rb_1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb2" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb3" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb4" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb5" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb6" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb7" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb8" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb9" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb10" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="rb_zapatos" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb_ropa" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="rb_objetos" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                               </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                               <Component id="b_agregarobjeto" min="-2" pref="155" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
+                              <Component id="b_modificaro" min="-2" pref="131" max="-2" attributes="0"/>
+                              <EmptySpace pref="135" max="32767" attributes="0"/>
+                              <Component id="b_eliminarobjetos" min="-2" pref="133" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="258" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -931,8 +940,12 @@
                           <Component id="rb_objetos" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      <Component id="b_agregarobjeto" min="-2" pref="76" max="-2" attributes="0"/>
-                      <EmptySpace pref="59" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="b_agregarobjeto" alignment="3" min="-2" pref="76" max="-2" attributes="0"/>
+                          <Component id="b_modificaro" alignment="3" min="-2" pref="76" max="-2" attributes="0"/>
+                          <Component id="b_eliminarobjetos" alignment="3" min="-2" pref="77" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1107,6 +1120,22 @@
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="b_agregarobjetoMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_modificaro">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Modificar objetos"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="b_modificaroMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_eliminarobjetos">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eliminar objetos"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="b_eliminarobjetosMouseClicked"/>
               </Events>
             </Component>
           </SubComponents>

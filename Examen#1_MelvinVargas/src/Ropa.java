@@ -55,7 +55,7 @@ public class Ropa extends Objeto{
 
     @Override
     public String toString() {
-        return "Ropa"+"\n"+"color: "+super.getColor()+"\n"+"Descripcion: "+super.getDescripcion()+"\n"+"marca: "+super.getMarca()+"\n"+"tamaño:"+super.getTam()+"\n" ;
+        return "Ropa"+" "+"color: "+super.getColor()+" "+"Descripcion: "+super.getDescripcion()+" "+"marca: "+super.getMarca()+" "+"tamaño:"+super.getTam()+"\n" ;
     }
     
 }
