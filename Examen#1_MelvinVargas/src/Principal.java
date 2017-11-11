@@ -31,6 +31,7 @@ public class Principal extends javax.swing.JFrame  {
         initComponents();
         String usuarioadmin = "kim";
         String contraadmin = "abc123";
+        tab.setEnabledAt(4, false);
         tab.setEnabledAt(3, false);
         tab.setEnabledAt(2, false);
         tab.setEnabledAt(1, false);
@@ -148,6 +149,10 @@ public class Principal extends javax.swing.JFrame  {
         b_agregarobjeto = new javax.swing.JButton();
         b_modificaro = new javax.swing.JButton();
         b_eliminarobjetos = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tabla1 = new javax.swing.JTable();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -799,6 +804,49 @@ public class Principal extends javax.swing.JFrame  {
 
         tab.addTab("Agregar objetos", jPanel4);
 
+        tabla1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(tabla1);
+
+        jButton3.setText("Listar");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(340, 340, 340)
+                        .addComponent(jButton3)))
+                .addContainerGap(204, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(jButton3)
+                .addContainerGap(60, Short.MAX_VALUE))
+        );
+
+        tab.addTab("Ver todas las personas", jPanel5);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -828,6 +876,7 @@ public class Principal extends javax.swing.JFrame  {
         if (tf_usuario.getText().equals("kim") && tf_contra.getText().equals("abc123")) {
             tf_usuario.setText("");
             tf_contra.setText("");
+            tab.setEnabledAt(4, true);
             tab.setEnabledAt(3, true);
             tab.setEnabledAt(2, true);
             tab.setEnabledAt(1, true);
@@ -1160,6 +1209,32 @@ public class Principal extends javax.swing.JFrame  {
         System.out.println(lista);
     }//GEN-LAST:event_b_modificaroMouseClicked
 
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        tabla1.setModel(new javax.swing.table.DefaultTableModel(
+                new String[][]{},
+                new String[]{
+                     lista.toString()
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+        
+
+    }//GEN-LAST:event_jButton3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1212,6 +1287,7 @@ public class Principal extends javax.swing.JFrame  {
     private javax.swing.ButtonGroup bg_tipo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1246,7 +1322,9 @@ public class Principal extends javax.swing.JFrame  {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JRadioButton rb10;
     private javax.swing.JRadioButton rb2;
     private javax.swing.JRadioButton rb3;
@@ -1279,6 +1357,7 @@ public class Principal extends javax.swing.JFrame  {
     private javax.swing.JSpinner spinner_edadp;
     private javax.swing.JTextArea ta_descripcion;
     private javax.swing.JTabbedPane tab;
+    private javax.swing.JTable tabla1;
     private javax.swing.JTextField tf_altura;
     private javax.swing.JTextField tf_color;
     private javax.swing.JTextField tf_contra;
